@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'android-apt' //  // butterknife: "8.4.0",使用
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -28,11 +28,41 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
 /*    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })*/
+
+    // base
     compile rootProject.ext.dependencies["appcompat-v7"]
-    compile rootProject.ext.dependencies["design"]
-    compile rootProject.ext.dependencies["constraint-layout"]
-    testCompile 'junit:junit:4.12'
+
+    //ui
+    compile rootProject.ext.dependencies["design"] // android design
+    compile rootProject.ext.dependencies["constraint-layout"] // 约束性布局
+    compile rootProject.ext.dependencies["iconics-core"] // ui 库各种icon
+    compile rootProject.ext.dependencies["roundedimageview"] // 圆角库
+
+    //di
+    compile rootProject.ext.dependencies["butterknife"] // findbyid 注解
+    apt rootProject.ext.dependencies["butterknife-compiler"]
+    provided rootProject.ext.dependencies["annotation"] //
+    compile rootProject.ext.dependencies["annotations"] //
+
+    compile rootProject.ext.dependencies["dagger"]
+    compile rootProject.ext.dependencies["dagger-compiler"]
+
+
+   //other
+    compile rootProject.ext.dependencies["fragmentation"] // fragment/activity 管理
+
+
+    // rx
+    compile rootProject.ext.dependencies["rxjava"]
+    compile rootProject.ext.dependencies["rxandroid"]
+
+    // imageloader
+    compile rootProject.ext.dependencies["glide"]
+    compile rootProject.ext.dependencies["glide-transformations"]
+
+
 }

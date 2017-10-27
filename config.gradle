@@ -45,7 +45,7 @@ ext {
             "material-dialogs"               : "com.github.afollestad.material-dialogs:core:0.8.5.4@aar",
             "material-dialogs:commons"       : "com.github.afollestad.material-dialogs:commons:0.8.5.4@aar",
 
-            "iconics-core"                   : "com.mikepenz:iconics-core:2.5.5@aar",
+            "iconics-core"                   : "com.mikepenz:iconics-core:2.8.2@aar",
             "material-design-iconic-typeface": "com.mikepenz:material-design-iconic-typeface:2.2.0.1@aar",
             "fontawesome-typeface"           : "com.mikepenz:fontawesome-typeface:4.5.0.1@aar",
             "foundation-icons-typeface"      : "com.mikepenz:foundation-icons-typeface:3.0.0.1@aar",
@@ -73,7 +73,7 @@ ext {
 
             //other
             "logger"                         : "com.orhanobut:logger:1.15",
-            "fragmentation"                  : "me.yokeyword:fragmentation:0.7.10",
+            "fragmentation"                  : "me.yokeyword:fragmentation:1.1.7",
             "androideventbus"                : "org.simple:androideventbus:1.0.5.1",
             "annotations"                    : "org.jetbrains:annotations-java5:15.0",
             "pgyersdk"                       : "com.pgyersdk:sdk:2.4.0",
